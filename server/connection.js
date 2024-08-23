@@ -4,8 +4,8 @@ const { findAvailablePort } = require('./free-port')
 const desiredPort = process.env.PORT ?? 3000
 
 const server = http.createServer((req, res) => {
-    console.log('request received')
-    res.end('Hola mundo')
+    console.log('Request received :)')
+    res.end('Hello World from Node Server!')
 })
 
 findAvailablePort(desiredPort).then(port => {
